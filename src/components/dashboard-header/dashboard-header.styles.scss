@@ -1,0 +1,43 @@
+.dashboard-header {
+  padding: 2rem 1rem 1.2rem;
+  display: flex;
+  @include font-size(20);
+  font-weight: 300;
+
+  @include respond(mobile) {
+    @include font-size(16);
+  }
+
+  &-selectall {
+    margin-right: 2rem;
+
+    @include respond(mobile) {
+      margin-right: 1rem;
+    }
+  }
+
+  &-selected {
+    margin-right: 6rem;
+
+    @include respond(mobile) {
+      margin-right: 2rem;
+    }
+  }
+
+  &-download button {
+    border: none;
+    background: none;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+  }
+}
+
+.dh-icon-download {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: $grey-dark;
+  margin-right: 8px;
+}
