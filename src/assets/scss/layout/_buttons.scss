@@ -1,0 +1,25 @@
+.btn-download {
+  border: none;
+  background: none;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  color: inherit;
+  transition: color .2s ease;
+
+  .dh-icon-download {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $grey-dark;
+    margin-right: 0.8rem;
+  }
+
+  &:hover, &:active {
+    color: $blue-medium;
+
+    .dh-icon-download {
+      fill: $blue-medium;
+    }
+  }
+}

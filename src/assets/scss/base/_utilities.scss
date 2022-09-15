@@ -22,3 +22,16 @@
     }
   }
 }
+
+.status-dot {
+  position: relative;
+  padding-left: 2.5rem;
+
+  &-green {
+    @include status-dot(1.4rem, 1.4rem, 0.2rem);
+
+    &::before {
+      animation: bgFlicker 3s ease-in-out infinite;
+    }
+  }
+}

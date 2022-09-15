@@ -1,6 +1,7 @@
+// Fallback for rem font sizes
 @mixin font-size($sizeValue) {
   $pxValue: $sizeValue;
-  $remValue: ($sizeValue / 10);
+  $remValue: ($sizeValue/10);
   font-size: #{$pxValue}px;
   font-size: #{$remValue}rem;
 }
@@ -21,5 +22,34 @@
 
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 120em) { @content }; //1920px
+  }
+}
+
+// Status dot mixin
+@mixin status-dot($width: 0.7rem, $height: 0.7rem, $top: 0.8rem, $bg: $light-green) {
+  &::before {
+    content: "";
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: $top;
+    background-color: $bg;
+  }
+}
+
+// Background color flicker animation
+@mixin bgFlickerFrames($bg-original: $light-green, $bg-inter: darken($light-green, 15%)) {
+  @keyframes bgFlicker {
+    0% {
+      background-color: $bg-original;
+    }
+    50% {
+      background-color: $bg-inter;
+    }
+    100% {
+      background-color: $bg-original;
+    }
   }
 }

@@ -4,8 +4,11 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
+@import "base/animations";
 
 @import "layout/layout";
+@import "layout/buttons";
 
-@import "../../components/dashboard-header/dashboard-header.styles";
+@import "../../components/dashboard/dashboard.styles";
 @import "../../components/dashboard-table/dashboard-table.styles";
+@import "../../components/dashboard-modal/dashboard-modal.styles";

@@ -23,21 +23,4 @@
       margin-right: 2rem;
     }
   }
-
-  &-download button {
-    border: none;
-    background: none;
-    font-size: inherit;
-    font-weight: inherit;
-    font-family: inherit;
-    cursor: pointer;
-    color: inherit;
-  }
-}
-
-.dh-icon-download {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: $grey-dark;
-  margin-right: 8px;
 }

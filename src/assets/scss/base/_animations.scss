@@ -1,0 +1,14 @@
+//Used to animate the dialog element
+@keyframes showDialog {
+  from {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Used to animate/flicker a background color. The below one doesn't have arguments because it uses the default one defined in the mixin (see: mixins.scss)
+@include bgFlickerFrames();
