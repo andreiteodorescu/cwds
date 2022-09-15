@@ -75,6 +75,7 @@ const DashboardComponent = () => {
 
         // Show modal
         document.querySelector(".dialog").showModal();
+        document.querySelector(".dialog").classList.add("dialog-open");
 
         // If the array with available downloads is not empty update the state
         if (filteredDwnArr.length > 0) {
@@ -85,7 +86,7 @@ const DashboardComponent = () => {
     };
 
     return (
-        <div className="dashboard-wrapper">
+        <div className="dashboard-wrapper" data-testid="dashboard-test">
             <div className="dashboard-header">
                 <label className="sr-only" htmlFor="selectAll">Check or uncheck all checkboxes</label>
                 <input

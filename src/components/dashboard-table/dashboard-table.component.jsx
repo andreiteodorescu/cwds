@@ -1,5 +1,3 @@
-import React from "react";
-
 const DashboardTableComponent = ({ name, device, path, status, handleGenChecks, isChecked, index }) => {
 
     return (

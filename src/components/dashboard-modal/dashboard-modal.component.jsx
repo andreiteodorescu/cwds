@@ -1,13 +1,12 @@
-import React from "react";
-
 const DashboardModalComponent = (props) => {
 
     const handleDialogClose = () => {
         document.querySelector(".dialog").close();
+        document.querySelector(".dialog").classList.remove("dialog-open");
     };
 
     return (
-        <dialog className="dialog">
+        <dialog className="dialog" data-testid="dashboard-modal-test">
             {props.inModal.length > 0 ?
                 <div className="dialog-has-files">
                     <p className="dialog-title">The following files are available for download</p>
