@@ -66,7 +66,7 @@ const DashboardComponent = () => {
 
     // Function for the download button
     const handleDownloadAvailable = () => {
-        // Create array with only the files with status available
+        // Create array with only the files checked and that have status available
         const filteredDwnArr = mainList.filter(obj => {
             return isCheck.includes(obj.name);
         }).filter(obj => {
@@ -75,6 +75,7 @@ const DashboardComponent = () => {
 
         // Show modal
         document.querySelector(".dialog").showModal();
+        // This is for tests purposes
         document.querySelector(".dialog").classList.add("dialog-open");
 
         // If the array with available downloads is not empty update the state
@@ -111,7 +112,7 @@ const DashboardComponent = () => {
                     }
                 </div>
                 <div className="dashboard-header-download">
-                    <button className="btn-download" tabIndex="0" type="button" onClick={handleDownloadAvailable}>
+                    <button className="btn-download" tabIndex="0" type="button" onClick={handleDownloadAvailable} disabled={isCheck.length === 0}>
                         <svg className="dh-icon-download" aria-hidden="true">
                             <use href="assets/images/sprite.svg#icon-cwds-download" />
                         </svg>

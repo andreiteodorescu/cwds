@@ -120,17 +120,4 @@ describe('Dashboard component', () => {
         const selectedContainer = screen.getByTestId('dashboard-test').querySelector(".dashboard-header-selected-none");
         expect(selectedContainer).toBeInTheDocument();
     });
-
-    test('Click on Download Selected shows modal', () => {
-        // Arrange
-        render(<DashboardComponent/>);
-
-        // Act
-        const dwnSelectedBtn = screen.getByTestId('dashboard-test').querySelector(".btn-download");
-        userEvent.click(dwnSelectedBtn);
-
-        // Assert
-        const modal = screen.getByTestId('dashboard-modal-test');
-        expect(modal).toHaveClass("dialog-open");
-    });
 });

@@ -22,4 +22,13 @@
       fill: $blue-medium;
     }
   }
+
+  &:disabled {
+    color: $grey-medium-2;
+    cursor: default;
+
+    .dh-icon-download {
+      fill: $grey-medium-2;
+    }
+  }
 }
