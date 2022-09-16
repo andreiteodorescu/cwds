@@ -75,8 +75,6 @@ const DashboardComponent = () => {
 
         // Show modal
         document.querySelector(".dialog").showModal();
-        // This is for tests purposes
-        document.querySelector(".dialog").classList.add("dialog-open");
 
         // If the array with available downloads is not empty update the state
         if (filteredDwnArr.length > 0) {

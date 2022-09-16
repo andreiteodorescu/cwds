@@ -2,8 +2,6 @@ const DashboardModalComponent = (props) => {
 
     const handleDialogClose = () => {
         document.querySelector(".dialog").close();
-        // This is for tests purposes
-        document.querySelector(".dialog").classList.remove("dialog-open");
     };
 
     return (
