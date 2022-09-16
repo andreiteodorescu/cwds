@@ -4,11 +4,6 @@ import userEvent from "@testing-library/user-event";
 import DashboardComponent from "./dashboard.component";
 
 describe('Dashboard component', () => {
-    beforeAll(() => {
-        HTMLDialogElement.prototype.showModal = jest.fn();
-        HTMLDialogElement.prototype.close = jest.fn();
-    });
-
     test('by checking the Select all checkbox all others will be checked', () => {
         // Arrange
         render(<DashboardComponent/>);
